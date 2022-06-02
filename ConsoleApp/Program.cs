@@ -15,13 +15,15 @@ namespace ConsoleApp
             //setup our DI
             var serviceProvider = new ServiceCollection()
                 .AddLogging()
-                .AddSingleton<ISolution<int[], bool>, ContainsDuplicate>()
+                .AddTransient<ISolution<int[], bool>, ContainsDuplicate>()
                 .BuildServiceProvider();
 
             Console.WriteLine($"-----------------------Starting {typeof(ConsoleApp.Program)} application-----------------------");
 
 
             var containsDuplicate = serviceProvider.GetService<ISolution<int[], bool>>();
+
+            containsDuplicate = serviceProvider.GetService<ContainsDuplicate>();
 
             var response = containsDuplicate.Solve(new List<int>() {1,3,5,6,1,7,8,9,10 }.ToArray());
 

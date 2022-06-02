@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Blind75.Stack
 {
-    internal class SearchInRotatedSortedArray : ISolution<List<int>,int>
+    public class SearchInRotatedSortedArray : ISolution<List<int>,int>
     {
         private readonly int _taget;
         public SearchInRotatedSortedArray(int target)
