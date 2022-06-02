@@ -25,5 +25,12 @@ namespace SolutionTests
             var response = searchInRotatedSortedArray.Solve(new List<int>() { 4, 5, 6, 7, 0, 1, 2 });
             Assert.True(response != -1);
         }
+        [Fact]
+        public void MoveZerosEndArray()
+        {
+            var moveZerosEndArray = new MoveZerosEndArray();
+            var response = moveZerosEndArray.Solve(new List<int>() {0, 1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9 });
+            Assert.True(response[response.Count - 1].Equals(0));
+        }
     }
 }
