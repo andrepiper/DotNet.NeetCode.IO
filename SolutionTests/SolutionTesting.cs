@@ -1,13 +1,13 @@
 using Blind75.ArraysHashing;
+using Blind75.Common;
+using Blind75.LinkedList;
 using Blind75.Stack;
 
 namespace SolutionTests
 {
     public class SolutionTesting
     {
-        public SolutionTesting()
-        {
-        }
+        public SolutionTesting(){}
 
         [Fact]
         public void ContainsDuplicate()
@@ -31,6 +31,22 @@ namespace SolutionTests
             var moveZerosEndArray = new MoveZerosEndArray();
             var response = moveZerosEndArray.Solve(new List<int>() {0, 1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9 });
             Assert.True(response[response.Count - 1].Equals(0));
+        }
+        [Fact]
+        public void InvertATree()
+        {
+            var invertATree = new InvertATree();
+            var treeNode = new TreeNode(new List<int>() { 1, 2, 3, 4, 5, 10, 13, 16, 22 }.ToArray());
+            var response = invertATree.Solve(treeNode);
+            Assert.True(response!=null);
+        }
+        [Fact]
+        public void MaxDepthOfTree()
+        {
+            var maxDepthOfTree = new MaxDepthOfTree();
+            var treeNode = new TreeNode(new List<int>() { 1, 2, 3, 4, 5, 10, 13, 16, 22 }.ToArray());
+            var response = maxDepthOfTree.Solve(treeNode);
+            Assert.True(response >= 0);
         }
     }
 }
