@@ -8,8 +8,4 @@
     <ProjectReference Include="..\Solution\GenericSolution.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Stack\" />
-  </ItemGroup>
-
 </Project>

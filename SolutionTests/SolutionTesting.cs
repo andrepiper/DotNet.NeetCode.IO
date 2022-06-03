@@ -48,5 +48,12 @@ namespace SolutionTests
             var response = maxDepthOfTree.Solve(treeNode);
             Assert.True(response >= 0);
         }
+        [Fact]
+        public void ValidParentheses()
+        {
+            var validParentheses = new ValidParentheses();
+            var response = validParentheses.Solve("()[]{}{");
+            Assert.True(response.Equals(false));
+        }
     }
 }
